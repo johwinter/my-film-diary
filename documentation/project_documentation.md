@@ -66,16 +66,16 @@ The idea about how I want to design the application came during the coding proce
 The final product now is an interactive personal film diary. It is built with Python and Streamlit, and allows to search for films, add them to a wishlist, mark them as watched and write personal reviews, etc. 
 
 Wishlist
-![Wishlist page](../screenshots/wishlist.png)
+![Wishlist page](../screenshot/wishlist.png)
 
 Mark as Watched 
-![Mark as Watched page](../screenshots/screenshot_watched.png)
+![Mark as Watched page](../screenshot/screenshot_watched.png)
 
 My Diary
-![My Diary page](../screenshots/screenshot_diary.png)
+![My Diary page](../screenshot/screenshot_diary.png)
 
 Statistics
-![Statistics page](../screenshots/screenshot_statistics.png)
+![Statistics page](../screenshot/screenshot_statistics.png)
 
 
 ## 14. Reflection
