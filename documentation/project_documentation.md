@@ -13,12 +13,15 @@ Initial Features:
 •	Search for films
 •	Add films to wishlist
 •	Retrieve film information from OMBd
-•	Display film poster
+•	Display film poster: reworked the film-adding flow so that teaching now shows a preview
 •	Display information (director, genre, year)
 •	Mark films as watched
 •	Give personal rating
 •	Write a review
 •	Display watched films in diary
+Later ideas:
+•	Save films between sessions, prevent duplicate films, statistics, genre filtering
+
 
 ## 6. Project Development
 
@@ -51,6 +54,14 @@ While developing the application, I often had multiple small issues that I neede
 
 
 ## 9. AI Usage and References
+Date | Source / Tool | What used for             | Learnings
+-------------------------------------------------------------
+07/26| Claude        | adding a statistics page  | Learned to use st.metric and st.bar_chart
+07/26| Claude        | styling the app           | Learned about streamlet's streamline/config.toml theme file
+07/26| ChatGPT       | debugging                 | found my mistake, had to remove the API key holder
+08/26| Claude        | adding genre filter dropdowns | Used Python sets to collect unique values without duplicates, wrote a reusable helper function (get_unique_genres) instead of repeating logic on both pages
+08/26| Claude        | debugging (IntendationError)| had to traceback python errors, avoided partial overlaps with deleting an old function
+
 
 ## 10. Testing
 - tested main functions of the application
