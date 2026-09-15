@@ -5,14 +5,16 @@ A personal film diary built with Python and Streamlit. Final Assignment for Tech
 
 **My Film Diary** is a personal digital film diary created with Python and Streamlit.
 
-My project is a personal film diary. It is a Streamlit application where I can search for films, save films I want to watch, and keep track of films I have already watched. Additionally, I can give reviews and ratings. The application uses the OMBd API to automatically retrieve information about films. 
-The idea for a personal film diary came to me in the first class, when we were introduced to the seminar and first spoke about the final assessment. Just a month before, I was able to work at the Berlinale, the International Film Festival in Berlin, in the Jury Office, where I got to not only watch films (with the International Jury) but also experienced how the jury discussed the films, what mattered to them and how they break down the different aspects of a „good“ film. 
-I have previously used the platform Letterboxd to keep track of the films I consume. However, after a couple of years, it has yet become another social media platform for me, where I interact with friends. With the aim to reduce my social media consumption and trying to consume films in a more focused way, I started to think about keeping an analogue film diary. While that is a beautiful way to connect your thoughts after seeing a film, it sometimes comes a little unhandy. Furthermore, I soon realised that only one notebook is not going to contain enough pages. 
-In our first class, I got the idea, that I can combat this problem myself by trying to build my own application.
-
 ---
 
 ## Features
+- search for films
+- add films to a wishlist
+- mark films as watched, with a personal rating and written review
+- all watched films are in a diary
+- statistics with total films watched, average rating, genre breakdown
+- all data saved locally between sessions (films.json)
+- duplicate films are automatically prevented 
 
 ### Film Wishlist
 
@@ -23,21 +25,21 @@ In our first class, I got the idea, that I can combat this problem myself by try
 * Filter the wishlist by genre.
 * Prevent the same film from being added twice.
 
-### ✅ Mark as Watched
+### Mark as Watched
 
 * Select a film from the wishlist.
 * Mark it as watched.
 * Give the film a personal rating from 1–5 stars.
 * Write a personal review.
 
-### 📖 Film Diary
+### Film Diary
 
 * View all films that have been watched.
 * See personal ratings and reviews.
 * View film information and posters.
 * Filter watched films by genre.
 
-### 📊 Statistics
+### Statistics
 
 * See the total number of films watched.
 * Calculate the average personal rating.
@@ -62,33 +64,18 @@ The project was created using:
 
 ---
 
-## Project Structure
-
-```text
-my-film-diary/
-│
-├── app.py
-├── films.json
-├── requirements.txt
-├── README.md
-│
-├── documentation/
-│   ├── project_documentation.md
-│   ├── development_log.md
-│   └── ai_and_references.md
-│   └── sketches/
-│       ├── initial_idea.jpg
-│       ├── wishlist_sketch.jpg
-│       └── diary_sketch.jpg
-│
-└── screenshots/
-```
 
 The main Python file contains the application logic. The `films.json` file stores the film data, while the `documentation` folder contains information about the development process and references.
 
 ---
 
-## How to Run the Application
+## Requirements:
+
+- Python 3.9+
+- OMDb API key (free, accessible on https://www.omdbapi.com/apikey.aspx)
+
+
+## Setup
 
 ### 1. Install Python
 
@@ -96,17 +83,18 @@ The main Python file contains the application logic. The `films.json` file store
 
 Open the terminal in the project folder and run:
 
-```bash
+
 pip install streamlit requests
-```
+
+### 3. Add OMDb API key
+Open app.py and replace the placeholder in this line near the top of the file with your own file:
+API_KEY = "your_api_key_here"
 
 ### 3. Start Streamlit
 
 Run:
 
-```bash
 streamlit run app.py
-```
 
 If everything works, the application should now open in the browser (😌😌)
 
@@ -152,3 +140,4 @@ Possible future improvements include:
 This application was created as a final programming project for **Tech Basics 1**.
 
 The project was developed as an opportunity to apply programming concepts learned during the course while also learning new concepts independently, including working with an external API and building a Streamlit web application.
+Author: Johanna Winter
