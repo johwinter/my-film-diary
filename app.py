@@ -3,7 +3,7 @@ import json
 import os
 import requests
 
-API_KEY = "your_api_key_here"  # Replace with your actual key
+API_KEY = "your_api_key_here"  
 
 # ---------- DATA FUNCTIONS ----------
 
@@ -41,7 +41,7 @@ def search_film(title):
     return None
 
 def get_unique_genres(films):
-    genres = set()  # a "set" automatically ignores duplicates
+    genres = set()  
     for film in films:
         for genre in film.get("genre", "").split(","):
             genre = genre.strip()
